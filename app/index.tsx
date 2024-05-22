@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 console.log('adsasd : ', process.env.EXPO_PUBLIC_ANDROID_CLIENT_ID);
 WebBrowser.maybeCompleteAuthSession();
 export default function Index() {
-  const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
+  const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId: process.env.EXPO_PUBLIC_ANDROID_CLIENT_ID,
   });
   console.log(request);
